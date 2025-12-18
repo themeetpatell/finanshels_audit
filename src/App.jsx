@@ -6,6 +6,7 @@ import VariationB from './pages/variations/VariationB';
 import VariationC from './pages/variations/VariationC';
 import VariationD from './pages/variations/VariationD';
 import VariationE from './pages/variations/VariationE';
+import VariationF from './pages/variations/VariationF';
 
 function App() {
   const [searchParams] = useSearchParams();
@@ -21,6 +22,8 @@ function App() {
         return <VariationD />;
       case 'e':
         return <VariationE />;
+      case 'f':
+        return <VariationF />;
       default:
         return <VariationA />;
     }

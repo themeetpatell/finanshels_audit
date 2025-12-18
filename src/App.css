@@ -477,6 +477,172 @@ body {
   background: #fafafa;
 }
 
+/* Variation F: Orange Round Shapes Background */
+.variation-f {
+  background: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.orange-shapes-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shape-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(241, 102, 16, 0.08);
+  filter: blur(40px);
+  animation: floatShape 20s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  right: -100px;
+  background: rgba(255, 138, 61, 0.1);
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 5%;
+  background: rgba(241, 102, 16, 0.06);
+  animation-delay: 4s;
+}
+
+.shape-4 {
+  width: 350px;
+  height: 350px;
+  bottom: 10%;
+  right: 10%;
+  background: rgba(255, 138, 61, 0.08);
+  animation-delay: 6s;
+}
+
+.shape-5 {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  right: 20%;
+  background: rgba(241, 102, 16, 0.05);
+  animation-delay: 8s;
+}
+
+.shape-6 {
+  width: 180px;
+  height: 180px;
+  bottom: 30%;
+  left: 15%;
+  background: rgba(255, 138, 61, 0.07);
+  animation-delay: 10s;
+}
+
+.shape-7 {
+  width: 220px;
+  height: 220px;
+  top: 60%;
+  right: -50px;
+  background: rgba(241, 102, 16, 0.06);
+  animation-delay: 12s;
+}
+
+.shape-8 {
+  width: 280px;
+  height: 280px;
+  bottom: -100px;
+  left: 30%;
+  background: rgba(255, 138, 61, 0.09);
+  animation-delay: 14s;
+}
+
+.shape-arc {
+  position: absolute;
+  border: 60px solid rgba(241, 102, 16, 0.05);
+  border-radius: 50%;
+  filter: blur(30px);
+  animation: floatShape 25s ease-in-out infinite;
+}
+
+.shape-arc-1 {
+  width: 500px;
+  height: 500px;
+  top: -200px;
+  left: -200px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation-delay: 0s;
+}
+
+.shape-arc-2 {
+  width: 600px;
+  height: 600px;
+  bottom: -250px;
+  right: -250px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  background: transparent;
+  animation-delay: 5s;
+}
+
+.shape-arc-3 {
+  width: 450px;
+  height: 450px;
+  top: 40%;
+  right: -150px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  background: transparent;
+  animation-delay: 10s;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+  75% {
+    transform: translate(40px, 20px) scale(1.05);
+  }
+}
+
+.variation-f .hero-split-screen,
+.variation-f .metrics-section-modern,
+.variation-f .benefits-section-modern,
+.variation-f .pricing-section-modern,
+.variation-f .testimonials-section-modern,
+.variation-f .cta-section-modern {
+  position: relative;
+  z-index: 1;
+}
+
+.variation-f .hero-f {
+  background: transparent;
+}
+
 .gradient-orb {
   position: fixed;
   border-radius: 50%;

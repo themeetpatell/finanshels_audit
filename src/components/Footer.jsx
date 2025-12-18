@@ -36,6 +36,7 @@ const Footer = () => {
               <a href="/?variant=c" className="footer-link">Variation C</a>
               <a href="/?variant=d" className="footer-link">Variation D</a>
               <a href="/?variant=e" className="footer-link">Variation E</a>
+              <a href="/?variant=f" className="footer-link">Variation F</a>
             </div>
           </div>
 
