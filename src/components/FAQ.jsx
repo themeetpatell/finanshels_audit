@@ -29,14 +29,14 @@ const FAQ = () => {
           <div className="section-badge">FAQ</div>
           <h2 className="section-title">Common Questions</h2>
           <p className="section-description">Everything you need to know about working with Finanshels.</p>
-        </div>
+      </div>
         <div className="faq-modern">
-          {faqs.map((item) => (
+        {faqs.map((item) => (
             <details key={item.q} className="faq-item-modern">
               <summary className="faq-question-modern">{item.q}</summary>
               <p className="faq-answer-modern">{item.a}</p>
-            </details>
-          ))}
+          </details>
+        ))}
         </div>
       </div>
     </section>

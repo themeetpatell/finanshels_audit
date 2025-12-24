@@ -308,7 +308,7 @@ const HomePage = () => {
                   ))}
                 </ul>
                 <a href="mailto:hello@finanshels.com" className={`btn-pricing-modern ${plan.popular ? 'btn-pricing-featured' : ''}`}>
-                  Get started
+                  Get Free Consultation
                   <FiArrowRight className="btn-icon" />
                 </a>
                 {plan.popular && (

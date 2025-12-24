@@ -20,8 +20,8 @@ const Nav = () => {
         </a>
         
         <a href="mailto:hello@finanshels.com" className="btn-nav-primary">
-          Get Started
-        </a>
+          Get Free Consultation
+          </a>
       </div>
     </header>
   );
