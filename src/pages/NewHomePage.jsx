@@ -228,64 +228,35 @@ const NewHomePage = () => {
           </div>
           
           <div className="hero-right">
-            <div className="audit-report-mock">
-              <div className="report-header">
-                <div className="report-brand">Finanshels Audit</div>
-                <div className="report-status">Mock Audit Report • FY 2024</div>
-              </div>
-              
-              <div className="report-summary">
-                <div>
-                  <p className="summary-label">Audit Opinion</p>
-                  <p className="summary-value success">Unqualified</p>
-                </div>
-                <div>
-                  <p className="summary-label">Prepared For</p>
-                  <p className="summary-value">UAE SME • Free Zone</p>
-                </div>
-              </div>
+            <div className="final-consultation-form hero-consultation-form">
+              <h3 className="form-title">Get Your Free Consultation</h3>
+              <p className="form-subtitle">Book a 30-minute call with our audit experts. No obligation.</p>
 
-              <div className="report-metrics">
-                <div className="report-metric">
-                  <span className="metric-label">Revenue</span>
-                  <span className="metric-value">AED 12.4M</span>
-                </div>
-                <div className="report-metric">
-                  <span className="metric-label">EBITDA</span>
-                  <span className="metric-value">AED 3.1M</span>
-                </div>
-                <div className="report-metric">
-                  <span className="metric-label">Cash & Bank</span>
-                  <span className="metric-value">AED 4.8M</span>
-                </div>
-              </div>
+              <form>
+                <input type="text" placeholder="Your Name *" className="form-input" required />
+                <input type="email" placeholder="Email Address *" className="form-input" required />
+                <input type="tel" placeholder="Phone Number *" className="form-input" required />
+                <input type="text" placeholder="Company Name (Optional)" className="form-input" />
+                <button type="submit" className="form-submit">Claim Free Consultation</button>
+              </form>
 
-              <div className="report-body">
-                <div className="report-highlight">
-                  <span className="highlight-dot" />
-                  <div>
-                    <p className="highlight-title">FTA-Ready Financials</p>
-                    <p className="highlight-desc">Prepared to UAE standards with full supporting schedules.</p>
-                  </div>
-                </div>
-                <div className="report-highlight">
-                  <span className="highlight-dot" />
-                  <div>
-                    <p className="highlight-title">License Renewal Pack</p>
-                    <p className="highlight-desc">Signed audit report, notes, and management letter.</p>
-                  </div>
-                </div>
-                <div className="report-highlight">
-                  <span className="highlight-dot" />
-                  <div>
-                    <p className="highlight-title">Bank-Ready Statements</p>
-                    <p className="highlight-desc">Clean, compliant statements for credit and financing.</p>
-                  </div>
-                </div>
-              </div>
+              <p className="form-disclaimer">
+                By submitting, you agree to receive communications from Finanshels. Your data is secure and will never be shared.
+              </p>
 
-              <div className="report-footer">
-                Mock audit report preview — swap with final visual from design.
+              <div className="form-badges">
+                <div className="badge-item">
+                  <FiCheckCircle className="badge-icon" />
+                  <span>Pay Only if Satisfied</span>
+                </div>
+                <div className="badge-item">
+                  <FiCheckCircle className="badge-icon" />
+                  <span>No Commitment</span>
+                </div>
+                <div className="badge-item">
+                  <FiCheckCircle className="badge-icon" />
+                  <span>24h Response</span>
+                </div>
               </div>
             </div>
           </div>
@@ -377,42 +348,75 @@ const NewHomePage = () => {
                 ))}
               </div>
               
-              <button className="btn-primary">Talk to an Audit Expert</button>
+              <a
+                className="btn-primary"
+                href="https://wa.me/971521549572?text=Hey%20I%20saw%20your%20ad%20about%20audit%20services.%20I%20want%20to%20know%20more."
+                target="_blank"
+                rel="noreferrer"
+              >
+                Talk to an Audit Expert
+              </a>
             </div>
             
             <div className="solution-right">
-              <div className="audit-report-mock report-alt">
+              <div className="audit-report-mock">
                 <div className="report-header">
-                  <div className="report-brand">Audit Engagement</div>
-                  <div className="report-status">DED, Free Zone &amp; FTA Ready</div>
+                  <div className="report-brand">Finanshels Audit</div>
+                  <div className="report-status">Mock Audit Report • FY 2024</div>
                 </div>
 
-                <div className="report-timeline">
-                  <div className="timeline-step completed">
-                    <span className="timeline-dot" />
+                <div className="report-summary">
+                  <div>
+                    <p className="summary-label">Audit Opinion</p>
+                    <p className="summary-value success">Unqualified</p>
+                  </div>
+                  <div>
+                    <p className="summary-label">Prepared For</p>
+                    <p className="summary-value">UAE SME • Free Zone</p>
+                  </div>
+                </div>
+
+                <div className="report-metrics">
+                  <div className="report-metric">
+                    <span className="metric-label">Revenue</span>
+                    <span className="metric-value">AED 12.4M</span>
+                  </div>
+                  <div className="report-metric">
+                    <span className="metric-label">EBITDA</span>
+                    <span className="metric-value">AED 3.1M</span>
+                  </div>
+                  <div className="report-metric">
+                    <span className="metric-label">Cash & Bank</span>
+                    <span className="metric-value">AED 4.8M</span>
+                  </div>
+                </div>
+
+                <div className="report-body">
+                  <div className="report-highlight">
+                    <span className="highlight-dot" />
                     <div>
-                      <p className="timeline-title">Planning & Risk Assessment</p>
-                      <p className="timeline-desc">Entity understanding, scope, and UAE compliance mapping.</p>
+                      <p className="highlight-title">FTA-Ready Financials</p>
+                      <p className="highlight-desc">Prepared to UAE standards with full supporting schedules.</p>
                     </div>
                   </div>
-                  <div className="timeline-step completed">
-                    <span className="timeline-dot" />
+                  <div className="report-highlight">
+                    <span className="highlight-dot" />
                     <div>
-                      <p className="timeline-title">Fieldwork & Testing</p>
-                      <p className="timeline-desc">Substantive testing with analytics and automated procedures.</p>
+                      <p className="highlight-title">License Renewal Pack</p>
+                      <p className="highlight-desc">Signed audit report, notes, and management letter.</p>
                     </div>
                   </div>
-                  <div className="timeline-step active">
-                    <span className="timeline-dot pulse" />
+                  <div className="report-highlight">
+                    <span className="highlight-dot" />
                     <div>
-                      <p className="timeline-title">Reporting</p>
-                      <p className="timeline-desc">Draft audit report, management letter, and FTA-ready schedules.</p>
+                      <p className="highlight-title">Bank-Ready Statements</p>
+                      <p className="highlight-desc">Clean, compliant statements for credit and financing.</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="report-footer">
-                  Mock audit report preview — replace with final design asset from Minha.
+                  Mock audit report preview — swap with final visual from design.
                 </div>
               </div>
             </div>
