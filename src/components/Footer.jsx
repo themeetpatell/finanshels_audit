@@ -8,7 +8,14 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand-modern">
             <div className="footer-logo-row">
-              <img src={finanshelsLogo} alt="Finanshels" className="footer-logo" />
+              <img
+                src={finanshelsLogo}
+                alt="Finanshels"
+                className="footer-logo"
+                height="45"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <p className="footer-tagline">Purpose-built bookkeeping and tax support for founders.</p>
             <div className="footer-contact-modern">

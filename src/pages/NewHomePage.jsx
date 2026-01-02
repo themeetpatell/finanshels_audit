@@ -1,7 +1,10 @@
-import { FiCheckCircle, FiStar, FiFileText, FiShield, FiUsers, FiZap, FiBarChart2, FiBriefcase, FiCreditCard } from 'react-icons/fi';
+import { useRef } from 'react';
+import { FiCheckCircle, FiStar, FiFileText, FiShield, FiUsers, FiZap, FiBarChart2, FiBriefcase, FiCreditCard, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import './NewHomePage.css';
 
 const NewHomePage = () => {
+  const testimonialsTrackRef = useRef(null);
+
   const clientLogos = [
     { src: '/clients/Binary.png', alt: 'Binary' },
     { src: '/clients/actualize.png', alt: 'Actualize' },
@@ -12,6 +15,254 @@ const NewHomePage = () => {
     { src: '/clients/humlog.png', alt: 'Humlog' },
     { src: '/clients/veehive.png', alt: 'Veehive' },
     { src: '/clients/zywa.png', alt: 'Zywa' }
+  ];
+
+  const countryCodes = [
+    { country: "Afghanistan", code: "+93" },
+    { country: "Aland Islands", code: "+358" },
+    { country: "Albania", code: "+355" },
+    { country: "Algeria", code: "+213" },
+    { country: "American Samoa", code: "+1" },
+    { country: "Andorra", code: "+376" },
+    { country: "Angola", code: "+244" },
+    { country: "Anguilla", code: "+1" },
+    { country: "Antigua and Barbuda", code: "+1" },
+    { country: "Argentina", code: "+54" },
+    { country: "Armenia", code: "+374" },
+    { country: "Aruba", code: "+297" },
+    { country: "Ascension Island", code: "+247" },
+    { country: "Australia", code: "+61" },
+    { country: "Austria", code: "+43" },
+    { country: "Azerbaijan", code: "+994" },
+    { country: "Bahamas", code: "+1" },
+    { country: "Bahrain", code: "+973" },
+    { country: "Bangladesh", code: "+880" },
+    { country: "Barbados", code: "+1" },
+    { country: "Belarus", code: "+375" },
+    { country: "Belgium", code: "+32" },
+    { country: "Belize", code: "+501" },
+    { country: "Benin", code: "+229" },
+    { country: "Bermuda", code: "+1" },
+    { country: "Bhutan", code: "+975" },
+    { country: "Bolivia, Plurinational State of", code: "+591" },
+    { country: "Bonaire, Sint Eustatius and Saba", code: "+599" },
+    { country: "Bosnia and Herzegovina", code: "+387" },
+    { country: "Botswana", code: "+267" },
+    { country: "Brazil", code: "+55" },
+    { country: "British Indian Ocean Territory", code: "+246" },
+    { country: "Brunei Darussalam", code: "+673" },
+    { country: "Bulgaria", code: "+359" },
+    { country: "Burkina Faso", code: "+226" },
+    { country: "Burundi", code: "+257" },
+    { country: "Cabo Verde", code: "+238" },
+    { country: "Cambodia", code: "+855" },
+    { country: "Cameroon", code: "+237" },
+    { country: "Canada", code: "+1" },
+    { country: "Cayman Islands", code: "+1" },
+    { country: "Central African Republic", code: "+236" },
+    { country: "Chad", code: "+235" },
+    { country: "Chile", code: "+56" },
+    { country: "China", code: "+86" },
+    { country: "Christmas Island", code: "+61" },
+    { country: "Cocos (Keeling) Islands", code: "+61" },
+    { country: "Colombia", code: "+57" },
+    { country: "Comoros", code: "+269" },
+    { country: "Congo", code: "+242" },
+    { country: "Congo, The Democratic Republic of the", code: "+243" },
+    { country: "Cook Islands", code: "+682" },
+    { country: "Costa Rica", code: "+506" },
+    { country: "Cote d'Ivoire", code: "+225" },
+    { country: "Croatia", code: "+385" },
+    { country: "Cuba", code: "+53" },
+    { country: "Curacao", code: "+599" },
+    { country: "Cyprus", code: "+357" },
+    { country: "Czechia", code: "+420" },
+    { country: "Denmark", code: "+45" },
+    { country: "Djibouti", code: "+253" },
+    { country: "Dominica", code: "+1" },
+    { country: "Dominican Republic", code: "+1" },
+    { country: "Ecuador", code: "+593" },
+    { country: "Egypt", code: "+20" },
+    { country: "El Salvador", code: "+503" },
+    { country: "Equatorial Guinea", code: "+240" },
+    { country: "Eritrea", code: "+291" },
+    { country: "Estonia", code: "+372" },
+    { country: "Eswatini", code: "+268" },
+    { country: "Ethiopia", code: "+251" },
+    { country: "Falkland Islands (Malvinas)", code: "+500" },
+    { country: "Faroe Islands", code: "+298" },
+    { country: "Fiji", code: "+679" },
+    { country: "Finland", code: "+358" },
+    { country: "France", code: "+33" },
+    { country: "French Guiana", code: "+594" },
+    { country: "French Polynesia", code: "+689" },
+    { country: "Gabon", code: "+241" },
+    { country: "Gambia", code: "+220" },
+    { country: "Georgia", code: "+995" },
+    { country: "Germany", code: "+49" },
+    { country: "Ghana", code: "+233" },
+    { country: "Gibraltar", code: "+350" },
+    { country: "Greece", code: "+30" },
+    { country: "Greenland", code: "+299" },
+    { country: "Grenada", code: "+1" },
+    { country: "Guadeloupe", code: "+590" },
+    { country: "Guam", code: "+1" },
+    { country: "Guatemala", code: "+502" },
+    { country: "Guernsey", code: "+44" },
+    { country: "Guinea", code: "+224" },
+    { country: "Guinea-Bissau", code: "+245" },
+    { country: "Guyana", code: "+592" },
+    { country: "Haiti", code: "+509" },
+    { country: "Holy See (Vatican City State)", code: "+39" },
+    { country: "Honduras", code: "+504" },
+    { country: "Hong Kong", code: "+852" },
+    { country: "Hungary", code: "+36" },
+    { country: "Iceland", code: "+354" },
+    { country: "India", code: "+91" },
+    { country: "Indonesia", code: "+62" },
+    { country: "Iran, Islamic Republic of", code: "+98" },
+    { country: "Iraq", code: "+964" },
+    { country: "Ireland", code: "+353" },
+    { country: "Isle of Man", code: "+44" },
+    { country: "Israel", code: "+972" },
+    { country: "Italy", code: "+39" },
+    { country: "Jamaica", code: "+1" },
+    { country: "Japan", code: "+81" },
+    { country: "Jersey", code: "+44" },
+    { country: "Jordan", code: "+962" },
+    { country: "Kazakhstan", code: "+7" },
+    { country: "Kenya", code: "+254" },
+    { country: "Kiribati", code: "+686" },
+    { country: "Korea, Democratic People's Republic of", code: "+850" },
+    { country: "Korea, Republic of", code: "+82" },
+    { country: "Kosovo", code: "+383" },
+    { country: "Kuwait", code: "+965" },
+    { country: "Kyrgyzstan", code: "+996" },
+    { country: "Lao People's Democratic Republic", code: "+856" },
+    { country: "Latvia", code: "+371" },
+    { country: "Lebanon", code: "+961" },
+    { country: "Lesotho", code: "+266" },
+    { country: "Liberia", code: "+231" },
+    { country: "Libya", code: "+218" },
+    { country: "Liechtenstein", code: "+423" },
+    { country: "Lithuania", code: "+370" },
+    { country: "Luxembourg", code: "+352" },
+    { country: "Macao", code: "+853" },
+    { country: "Madagascar", code: "+261" },
+    { country: "Malawi", code: "+265" },
+    { country: "Malaysia", code: "+60" },
+    { country: "Maldives", code: "+960" },
+    { country: "Mali", code: "+223" },
+    { country: "Malta", code: "+356" },
+    { country: "Marshall Islands", code: "+692" },
+    { country: "Martinique", code: "+596" },
+    { country: "Mauritania", code: "+222" },
+    { country: "Mauritius", code: "+230" },
+    { country: "Mayotte", code: "+262" },
+    { country: "Mexico", code: "+52" },
+    { country: "Micronesia, Federated States of", code: "+691" },
+    { country: "Moldova, Republic of", code: "+373" },
+    { country: "Monaco", code: "+377" },
+    { country: "Mongolia", code: "+976" },
+    { country: "Montenegro", code: "+382" },
+    { country: "Montserrat", code: "+1" },
+    { country: "Morocco", code: "+212" },
+    { country: "Mozambique", code: "+258" },
+    { country: "Myanmar", code: "+95" },
+    { country: "Namibia", code: "+264" },
+    { country: "Nauru", code: "+674" },
+    { country: "Nepal", code: "+977" },
+    { country: "Netherlands", code: "+31" },
+    { country: "New Caledonia", code: "+687" },
+    { country: "New Zealand", code: "+64" },
+    { country: "Nicaragua", code: "+505" },
+    { country: "Niger", code: "+227" },
+    { country: "Nigeria", code: "+234" },
+    { country: "Niue", code: "+683" },
+    { country: "Norfolk Island", code: "+672" },
+    { country: "North Macedonia", code: "+389" },
+    { country: "Northern Mariana Islands", code: "+1" },
+    { country: "Norway", code: "+47" },
+    { country: "Oman", code: "+968" },
+    { country: "Pakistan", code: "+92" },
+    { country: "Palau", code: "+680" },
+    { country: "Palestine, State of", code: "+970" },
+    { country: "Panama", code: "+507" },
+    { country: "Papua New Guinea", code: "+675" },
+    { country: "Paraguay", code: "+595" },
+    { country: "Peru", code: "+51" },
+    { country: "Philippines", code: "+63" },
+    { country: "Poland", code: "+48" },
+    { country: "Portugal", code: "+351" },
+    { country: "Puerto Rico", code: "+1" },
+    { country: "Qatar", code: "+974" },
+    { country: "Reunion", code: "+262" },
+    { country: "Romania", code: "+40" },
+    { country: "Russian Federation", code: "+7" },
+    { country: "Rwanda", code: "+250" },
+    { country: "Saint Barthelemy", code: "+590" },
+    { country: "Saint Helena, Ascension and Tristan da Cunha", code: "+290" },
+    { country: "Saint Kitts and Nevis", code: "+1" },
+    { country: "Saint Lucia", code: "+1" },
+    { country: "Saint Martin (French part)", code: "+590" },
+    { country: "Saint Pierre and Miquelon", code: "+508" },
+    { country: "Saint Vincent and the Grenadines", code: "+1" },
+    { country: "Samoa", code: "+685" },
+    { country: "San Marino", code: "+378" },
+    { country: "Sao Tome and Principe", code: "+239" },
+    { country: "Saudi Arabia", code: "+966" },
+    { country: "Senegal", code: "+221" },
+    { country: "Serbia", code: "+381" },
+    { country: "Seychelles", code: "+248" },
+    { country: "Sierra Leone", code: "+232" },
+    { country: "Singapore", code: "+65" },
+    { country: "Sint Maarten (Dutch part)", code: "+1" },
+    { country: "Slovakia", code: "+421" },
+    { country: "Slovenia", code: "+386" },
+    { country: "Solomon Islands", code: "+677" },
+    { country: "Somalia", code: "+252" },
+    { country: "South Africa", code: "+27" },
+    { country: "South Sudan", code: "+211" },
+    { country: "Spain", code: "+34" },
+    { country: "Sri Lanka", code: "+94" },
+    { country: "Sudan", code: "+249" },
+    { country: "Suriname", code: "+597" },
+    { country: "Svalbard and Jan Mayen", code: "+47" },
+    { country: "Sweden", code: "+46" },
+    { country: "Switzerland", code: "+41" },
+    { country: "Syrian Arab Republic", code: "+963" },
+    { country: "Taiwan, Province of China", code: "+886" },
+    { country: "Tajikistan", code: "+992" },
+    { country: "Tanzania, United Republic of", code: "+255" },
+    { country: "Thailand", code: "+66" },
+    { country: "Timor-Leste", code: "+670" },
+    { country: "Togo", code: "+228" },
+    { country: "Tokelau", code: "+690" },
+    { country: "Tonga", code: "+676" },
+    { country: "Trinidad and Tobago", code: "+1" },
+    { country: "Tristan da Cunha", code: "+290" },
+    { country: "Tunisia", code: "+216" },
+    { country: "Turkiye", code: "+90" },
+    { country: "Turkmenistan", code: "+993" },
+    { country: "Turks and Caicos Islands", code: "+1" },
+    { country: "Tuvalu", code: "+688" },
+    { country: "Uganda", code: "+256" },
+    { country: "Ukraine", code: "+380" },
+    { country: "United Arab Emirates", code: "+971" },
+    { country: "United Kingdom", code: "+44" },
+    { country: "United States", code: "+1" },
+    { country: "Uruguay", code: "+598" },
+    { country: "Uzbekistan", code: "+998" },
+    { country: "Vanuatu", code: "+678" },
+    { country: "Venezuela, Bolivarian Republic of", code: "+58" },
+    { country: "Viet Nam", code: "+84" },
+    { country: "Virgin Islands, British", code: "+1" },
+    { country: "Virgin Islands, U.S.", code: "+1" },
+    { country: "Wallis and Futuna", code: "+681" },
+    { country: "Western Sahara", code: "+212" },
+    { country: "Yemen", code: "+967" },
+    { country: "Zambia", code: "+260" },
+    { country: "Zimbabwe", code: "+263" }
   ];
 
   const auditNecessityPoints = [
@@ -178,6 +429,16 @@ const NewHomePage = () => {
     }
   ];
 
+  const scrollTestimonials = (direction) => {
+    const container = testimonialsTrackRef.current;
+    if (!container) return;
+
+    const card = container.querySelector('.testimonial-card');
+    const scrollAmount = card ? card.getBoundingClientRect().width + 24 : container.clientWidth;
+
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  };
+
   return (
     <div className="new-homepage">
       {/* Hero Section */}
@@ -232,12 +493,115 @@ const NewHomePage = () => {
               <h3 className="form-title">Get Your Free Consultation</h3>
               <p className="form-subtitle">Book a 30-minute call with our audit experts. No obligation.</p>
 
-              <form>
-                <input type="text" placeholder="Your Name *" className="form-input" required />
-                <input type="email" placeholder="Email Address *" className="form-input" required />
-                <input type="tel" placeholder="Phone Number *" className="form-input" required />
-                <input type="text" placeholder="Company Name (Optional)" className="form-input" />
-                <button type="submit" className="form-submit">Claim Free Consultation</button>
+              <form
+                action="https://forms.zohopublic.com/finanshelsllc/form/GetYourFreeAuditConsultation/formperma/EikNR5Pwn-Ak9PHJxB-cTO47ehdcxhrZeW_itd-c-I0/htmlRecords/submit"
+                name="form"
+                id="hero-zoho-form"
+                method="POST"
+                acceptCharset="UTF-8"
+                encType="multipart/form-data"
+              >
+                <input type="hidden" name="zf_referrer_name" value="" />
+                <input type="hidden" name="zf_redirect_url" value="" />
+                <input type="hidden" name="zc_gad" value="" />
+
+                <div className="form-row">
+                  <div className="form-field">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      maxLength="255"
+                      name="Name_First"
+                      fieldType="7"
+                      placeholder="First name"
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="form-field">
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      maxLength="255"
+                      name="Name_Last"
+                      fieldType="7"
+                      placeholder="Last name"
+                      className="form-input"
+                    />
+                  </div>
+                </div>
+
+                <label>
+                  Email <em>*</em>
+                </label>
+                <input
+                  type="text"
+                  maxLength="255"
+                  name="Email"
+                  defaultValue=""
+                  fieldType="9"
+                  placeholder="i.e. name@yourdomain.com"
+                  className="form-input"
+                />
+
+                <div className="form-row phone-row">
+                  <div className="form-field">
+                    <label>Code</label>
+                    <select
+                      compname="PhoneNumber"
+                      name="PhoneNumber_countrycode"
+                      phoneFormat="1"
+                      id="international_PhoneNumber_countrycode"
+                      className="form-input"
+                      defaultValue="+971"
+                    >
+                      {countryCodes.map(({ country, code }) => (
+                        <option key={`${country}-${code}`} value={code}>
+                          {country} ({code})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="form-field">
+                    <label>Number</label>
+                    <input
+                      type="text"
+                      compname="PhoneNumber_countrycodeval"
+                      name="PhoneNumber_countrycodeval"
+                      phoneFormat="1"
+                      maxLength="10"
+                      id="international_PhoneNumber_countrycodeval"
+                      placeholder="5xxxxxxxx"
+                      className="form-input"
+                    />
+                  </div>
+                </div>
+
+                <label>
+                  Company Name <em>*</em>
+                </label>
+                <input
+                  type="text"
+                  name="SingleLine1"
+                  defaultValue=""
+                  fieldType="1"
+                  maxLength="255"
+                  placeholder="i.e. dropxcell LLC"
+                  className="form-input"
+                />
+
+                <label>Job Title</label>
+                <input
+                  type="text"
+                  name="SingleLine2"
+                  defaultValue=""
+                  fieldType="1"
+                  maxLength="255"
+                  placeholder="e.g. Finance Manager"
+                  className="form-input"
+                />
+                <button type="submit" className="form-submit">
+                  Submit
+                </button>
               </form>
 
               <p className="form-disclaimer">
@@ -267,7 +631,14 @@ const NewHomePage = () => {
           <div className="logo-list-wide">
             {clientLogos.map((logo) => (
               <div key={logo.alt} className="trust-logo">
-                <img src={logo.src} alt={`${logo.alt} logo`} className="trust-logo-image" loading="lazy" />
+                <img
+                  src={logo.src}
+                  alt={`${logo.alt} logo`}
+                  className="trust-logo-image"
+                  loading="lazy"
+                  decoding="async"
+                  height="28"
+                />
               </div>
             ))}
           </div>
@@ -282,7 +653,7 @@ const NewHomePage = () => {
             <div className="stat-label">Businesses Served</div>
           </div>
           <div className="stat-item">
-            <div className="stat-value">4.9%</div>
+            <div className="stat-value">4.9</div>
             <div className="stat-label">Trustpilot Rating</div>
           </div>
           <div className="stat-item">
@@ -450,60 +821,91 @@ const NewHomePage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <div className="content-container">
-          <div className="section-header">
-            <p className="section-eyebrow">CLIENT SUCCESS STORIES</p>
-            <h2 className="section-title">
-              Trusted by <span className="highlight-green">5,000+ UAE Businesses</span>
+      {/* Testimonials Section - CTO Redesign */}
+      <section className="testimonials-section" id="reviews">
+        <div className="testimonials-container">
+          <div className="testimonials-header">
+            <span className="testimonials-label">CLIENT SUCCESS STORIES</span>
+            <h2 className="testimonials-heading">
+              Trusted by <span className="text-accent">5,000+ Businesses</span>
             </h2>
-            <p className="section-subtitle">
+            <p className="testimonials-description">
               Don't just take our word for it. Here's what our clients say about working with Finanshels.
             </p>
           </div>
           
-          <div className="testimonials-window">
-            <div className="testimonials-grid">
-              {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <div key={index} className="testimonial-card">
-                  <div className="testimonial-stars">
-                    {[...Array(5)].map((_, i) => (
-                      <FiStar key={i} className="star-icon" fill="#f16610" stroke="#f16610" />
-                    ))}
-                  </div>
-              
-                  <div className="testimonial-quote-icon">❝</div>
-              
-                  <p className="testimonial-quote">{testimonial.quote}</p>
-              
-                  <div className="testimonial-author">
-                    <div className="author-avatar">
-                      {testimonial.avatar ? (
-                        <img src={testimonial.avatar} alt={testimonial.name} />
-                      ) : (
-                        <span>{testimonial.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}</span>
-                      )}
+          <div className="testimonials-carousel">
+            <button
+              className="carousel-control carousel-control-prev"
+              onClick={() => scrollTestimonials(-1)}
+              aria-label="Previous testimonials"
+            >
+              <FiChevronLeft />
+            </button>
+
+            <div className="carousel-viewport" ref={testimonialsTrackRef}>
+              <div className="carousel-track">
+                {testimonials.map((testimonial, index) => (
+                  <article key={index} className="testimonial">
+                    <div className="testimonial-header">
+                      <div className="rating">
+                        {[...Array(5)].map((_, i) => (
+                          <FiStar key={i} className="rating-star" />
+                        ))}
+                      </div>
                     </div>
-                    <div className="author-info">
-                      <div className="author-name">{testimonial.name}</div>
-                      <div className="author-role">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="google-reviews">
-            <div className="google-rating">
-              <div className="rating-stars">
-                {[...Array(5)].map((_, i) => (
-                  <FiStar key={i} className="star-icon" fill="#f16610" stroke="#f16610" />
+                    
+                    <blockquote className="testimonial-content">
+                      <p>{testimonial.quote}</p>
+                    </blockquote>
+                    
+                    <footer className="testimonial-author">
+                      <div className="author-image">
+                        {testimonial.avatar ? (
+                          <img
+                            src={testimonial.avatar}
+                            alt={testimonial.name}
+                            loading="lazy"
+                            decoding="async"
+                            width="60"
+                            height="60"
+                          />
+                        ) : (
+                          <div className="author-initials">
+                            {testimonial.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
+                          </div>
+                        )}
+                      </div>
+                      <div className="author-info">
+                        <cite className="author-name">{testimonial.name}</cite>
+                        <p className="author-role">{testimonial.role}</p>
+                      </div>
+                    </footer>
+                  </article>
                 ))}
               </div>
-              <span className="rating-text">4.9/5 on Trustpilot Reviews</span>
-              <span className="rating-count">(239 reviews)</span>
+            </div>
+
+            <button
+              className="carousel-control carousel-control-next"
+              onClick={() => scrollTestimonials(1)}
+              aria-label="Next testimonials"
+            >
+              <FiChevronRight />
+            </button>
+          </div>
+
+          <div className="trustpilot-widget">
+            <div className="trustpilot-content">
+              <div className="trustpilot-stars">
+                {[...Array(5)].map((_, i) => (
+                  <FiStar key={i} className="trustpilot-star" />
+                ))}
+              </div>
+              <div className="trustpilot-text">
+                <strong>4.9/5</strong> on Trustpilot Reviews
+              </div>
+              <div className="trustpilot-count">239 reviews</div>
             </div>
           </div>
         </div>
@@ -545,12 +947,115 @@ const NewHomePage = () => {
                 <h3 className="form-title">Get Your Free Consultation</h3>
                 <p className="form-subtitle">Book a 30-minute call with our audit experts. No obligation.</p>
               
-              <form>
-                <input type="text" placeholder="Your Name *" className="form-input" required />
-                <input type="email" placeholder="Email Address *" className="form-input" required />
-                <input type="tel" placeholder="Phone Number *" className="form-input" required />
-                <input type="text" placeholder="Company Name (Optional)" className="form-input" />
-                <button type="submit" className="form-submit">Claim Free Consultation</button>
+              <form
+                action="https://forms.zohopublic.com/finanshelsllc/form/GetYourFreeAuditConsultation/formperma/EikNR5Pwn-Ak9PHJxB-cTO47ehdcxhrZeW_itd-c-I0/htmlRecords/submit"
+                name="form"
+                id="cta-zoho-form"
+                method="POST"
+                acceptCharset="UTF-8"
+                encType="multipart/form-data"
+              >
+                <input type="hidden" name="zf_referrer_name" value="" />
+                <input type="hidden" name="zf_redirect_url" value="" />
+                <input type="hidden" name="zc_gad" value="" />
+
+                <div className="form-row">
+                  <div className="form-field">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      maxLength="255"
+                      name="Name_First"
+                      fieldType="7"
+                      placeholder="First name"
+                      className="form-input"
+                    />
+                  </div>
+                  <div className="form-field">
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      maxLength="255"
+                      name="Name_Last"
+                      fieldType="7"
+                      placeholder="Last name"
+                      className="form-input"
+                    />
+                  </div>
+                </div>
+
+                <label>
+                  Email <em>*</em>
+                </label>
+                <input
+                  type="text"
+                  maxLength="255"
+                  name="Email"
+                  defaultValue=""
+                  fieldType="9"
+                  placeholder="i.e. name@yourdomain.com"
+                  className="form-input"
+                />
+
+                <div className="form-row phone-row">
+                  <div className="form-field">
+                    <label>Code</label>
+                    <select
+                      compname="PhoneNumber"
+                      name="PhoneNumber_countrycode"
+                      phoneFormat="1"
+                      id="international_PhoneNumber_countrycode_cta"
+                      className="form-input"
+                      defaultValue="+971"
+                    >
+                      {countryCodes.map(({ country, code }) => (
+                        <option key={`${country}-${code}`} value={code}>
+                          {country} ({code})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="form-field">
+                    <label>Number</label>
+                    <input
+                      type="text"
+                      compname="PhoneNumber_countrycodeval"
+                      name="PhoneNumber_countrycodeval"
+                      phoneFormat="1"
+                      maxLength="10"
+                      id="international_PhoneNumber_countrycodeval_cta"
+                      placeholder="5xxxxxxxx"
+                      className="form-input"
+                    />
+                  </div>
+                </div>
+
+                <label>
+                  Company Name <em>*</em>
+                </label>
+                <input
+                  type="text"
+                  name="SingleLine1"
+                  defaultValue=""
+                  fieldType="1"
+                  maxLength="255"
+                  placeholder="i.e. dropxcell LLC"
+                  className="form-input"
+                />
+
+                <label>Job Title</label>
+                <input
+                  type="text"
+                  name="SingleLine2"
+                  defaultValue=""
+                  fieldType="1"
+                  maxLength="255"
+                  placeholder="e.g. Finance Manager"
+                  className="form-input"
+                />
+                <button type="submit" className="form-submit">
+                  Submit
+                </button>
               </form>
               
               <p className="form-disclaimer">

@@ -22,11 +22,11 @@
 .nav-container-modern {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .nav-logo-modern {
@@ -41,7 +41,7 @@
 }
 
 .nav-logo-img {
-  height: 40px;
+  height: 32px;
   width: auto;
 }
 
@@ -1698,8 +1698,8 @@ body {
   gap: 0.625rem;
   padding: 0.625rem 1rem;
   border-radius: 50px;
-  background: white;
-  border: 2px solid;
+  background: #030712;
+  border: 2px solid #0f172a;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   font-weight: 600;
@@ -1707,38 +1707,45 @@ body {
   position: relative;
   min-width: 130px;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #e2e8f0;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
 }
 
 .contact-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
 }
 
 .contact-btn.whatsapp {
-  color: #25D366;
-  border-color: #25D366;
+  border-color: #25d366;
 }
 
 .contact-btn.whatsapp:hover {
-  background: #25D366;
+  background: #0a1f15;
   color: white;
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 8px 18px rgba(37, 211, 102, 0.4);
 }
 
 .contact-btn.phone {
-  color: #f16610;
   border-color: #f16610;
 }
 
 .contact-btn.phone:hover {
-  background: #f16610;
+  background: #1a0f08;
   color: white;
-  box-shadow: 0 6px 16px rgba(241, 102, 16, 0.25);
+  box-shadow: 0 8px 18px rgba(241, 102, 16, 0.4);
 }
 
 .contact-icon {
   font-size: 1.125rem;
+}
+
+.contact-btn.whatsapp .contact-icon {
+  color: #25d366;
+}
+
+.contact-btn.phone .contact-icon {
+  color: #f16610;
 }
 
 .contact-label {
